@@ -28,7 +28,7 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         GUI.scoreCounter.text=score.ToString();
-        if(player.health==0){
+        if(player.health<=0){
             playerTrans.position=currentRespawnTrans.position+Vector3.up;
             sceneTransfer(SceneManager.GetActiveScene().name);
             player.health=100;
